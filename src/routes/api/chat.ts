@@ -15,7 +15,7 @@ export const Route = createFileRoute("/api/chat")({
           model: gateway("google/gemini-3-flash-preview"),
           system:
             "You are WorkMate, a professional AI workplace assistant. Be concise, practical, and helpful. Use markdown when useful. Always be honest about uncertainty.",
-          messages: convertToModelMessages(messages),
+          messages: await convertToModelMessages(messages),
         });
         return result.toUIMessageStreamResponse({ originalMessages: messages });
       },
