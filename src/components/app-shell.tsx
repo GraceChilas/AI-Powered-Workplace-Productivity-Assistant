@@ -4,6 +4,7 @@ import { useState, type ReactNode } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { AppSidebar } from "./app-sidebar";
+import { ThemeToggle } from "./theme-toggle";
 import {
   LayoutDashboard,
   Mail,
@@ -11,6 +12,7 @@ import {
   CalendarCheck,
   BookOpen,
   MessagesSquare,
+  ListChecks,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -19,6 +21,7 @@ const items = [
   { title: "Email Generator", url: "/email", icon: Mail },
   { title: "Notes Summarizer", url: "/notes", icon: FileText },
   { title: "Task Planner", url: "/planner", icon: CalendarCheck },
+  { title: "My Tasks", url: "/tasks", icon: ListChecks },
   { title: "Research Assistant", url: "/research", icon: BookOpen },
   { title: "AI Chatbot", url: "/chat", icon: MessagesSquare },
 ];
@@ -69,8 +72,11 @@ export function AppShell({ title, children }: { title: string; children: ReactNo
             </SheetContent>
           </Sheet>
           <h1 className="text-lg font-semibold tracking-tight truncate">{title}</h1>
-          <div className="ml-auto hidden sm:flex items-center gap-2 text-xs text-muted-foreground">
-            <span className="h-2 w-2 rounded-full bg-emerald-500" /> Powered by Lovable AI
+          <div className="ml-auto flex items-center gap-3">
+            <div className="hidden sm:flex items-center gap-2 text-xs text-muted-foreground">
+              <span className="h-2 w-2 rounded-full bg-emerald-500" /> Powered by Lovable AI
+            </div>
+            <ThemeToggle />
           </div>
         </header>
         <main className="flex-1 p-4 md:p-8 max-w-6xl w-full mx-auto">{children}</main>
