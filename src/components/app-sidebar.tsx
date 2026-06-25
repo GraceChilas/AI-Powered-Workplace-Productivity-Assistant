@@ -6,6 +6,7 @@ import {
   CalendarCheck,
   BookOpen,
   MessagesSquare,
+  ListChecks,
   Sparkles,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -15,6 +16,7 @@ const items = [
   { title: "Email Generator", url: "/email", icon: Mail },
   { title: "Notes Summarizer", url: "/notes", icon: FileText },
   { title: "Task Planner", url: "/planner", icon: CalendarCheck },
+  { title: "My Tasks", url: "/tasks", icon: ListChecks },
   { title: "Research Assistant", url: "/research", icon: BookOpen },
   { title: "AI Chatbot", url: "/chat", icon: MessagesSquare },
 ];
