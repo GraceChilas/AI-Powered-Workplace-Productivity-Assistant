@@ -78,14 +78,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "TaskFlow Assistant" },
+      { name: "description", content: "Your all-in-one workspace partner for smarter emails, quick summaries, interactive chat-bot answers, writing edits and task management" },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "TaskFlow Assistant" },
+      { property: "og:description", content: "Your all-in-one workspace partner for smarter emails, quick summaries, interactive chat-bot answers, writing edits and task management" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "TaskFlow Assistant" },
+      { name: "twitter:description", content: "Your all-in-one workspace partner for smarter emails, quick summaries, interactive chat-bot answers, writing edits and task management" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/wyQx0jQckaOwE0tniesZWJKNLOK2/social-images/social-1782385582106-TaskFlow_Assistant.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/wyQx0jQckaOwE0tniesZWJKNLOK2/social-images/social-1782385582106-TaskFlow_Assistant.webp" },
     ],
     links: [
       {
